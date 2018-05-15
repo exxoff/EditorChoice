@@ -29,8 +29,10 @@ namespace EditorChoice.Model
         {
             // Use this to connect to the actual data service
             Editors = new List<Editor>();
+            string currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            Editors = ReadSource(currentDirectory + "\\editors.json");
 
-            Editors = ReadSource("editors.json");
+
             //Editors.Add(new Editor()
             //{
             //    EditorName = "Notepad",
@@ -54,7 +56,7 @@ namespace EditorChoice.Model
         {
             List<Editor> retList = new List<Editor>();
 
-            using (StreamReader reader = new StreamReader(Jsonfile))
+            using (StreamReader reader = new StreamReader(new Uri(Jsonfile).AbsolutePath))
             {
                 var json = reader.ReadToEnd();
 
@@ -62,7 +64,7 @@ namespace EditorChoice.Model
             }
 
 
-                return retList;
+            return retList;
         }
         public DataService()
         {

@@ -21,8 +21,18 @@ namespace EditorChoice
         {
             base.OnStartup(e);
 
-            Document d = Document.Instance;
-            d.DucumentPath = e.Args[0];
+            if(e.Args.Length > 0)
+            {
+                Document d = Document.Instance;
+                d.DucumentPath = e.Args[0];
+
+            }
+            else
+            {
+                MessageBox.Show("Please specify which file to open.");
+                Application.Current.Shutdown();
+            }
+
             //ComposeObjects();
 
             //MainWindow.Show();

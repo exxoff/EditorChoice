@@ -83,8 +83,8 @@ namespace EditorChoice.ViewModel
                 processStartInfo.Arguments = string.Format("{0} {1}", this.DocumentPath, editor.Options);
                 processStartInfo.FileName = editor.ExePath;
                 Process.Start(processStartInfo);
-                System.Windows.Application.Current.Shutdown();
-                // MessageBox.Show(string.Format("{0} {1}",editor.ExePath,this.DocumentPath));
+                Application.Current.Shutdown();
+                
             }
 
 
