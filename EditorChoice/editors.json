@@ -1,0 +1,16 @@
+﻿[
+  {
+    "name": "Notepad",
+    "exe": "C:\\Windows\\system32\\notepad.exe",
+    "icon": "c:\\Users\\v063992\\Downloads\\2000px-Icon-notepad.svg.png",
+    "shortcut": "1"
+  },
+    {
+      "name": "Notepad++",
+      "exe": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\Notepad++Portable.exe",
+      "icon": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\App\\AppInfo\\appicon.ico",
+      "shortcut":"2"
+    }
+
+]
+
