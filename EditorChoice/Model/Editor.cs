@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace EditorChoice.Model
 {
@@ -19,5 +20,7 @@ namespace EditorChoice.Model
         [JsonProperty("shortcut")]
         public string ShortcutKey { get; set; }
 
+        [JsonProperty("extensions")]
+        public List<string> Extensions { get; set; }
     }
 }

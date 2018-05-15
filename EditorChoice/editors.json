@@ -1,25 +1,44 @@
 ﻿[
-	{
-	"name": "Notepad",
-	"exe": "C:\\Windows\\system32\\notepad.exe",
-	"icon": "c:\\Users\\v063992\\Downloads\\2000px-Icon-notepad.svg.png",
-	"shortcut": "1"
-	},
-    {
-      "name": "Notepad++",
-      "exe": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\Notepad++Portable.exe",
-      "icon": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\App\\AppInfo\\appicon.ico",
-      "shortcut":"2"
-    },
-	{
-		"name":"Atom",
-		"exe":"C:\\Users\\v063992\\AppData\\Local\\atom\\atom.exe",
-		"icon":"C:\\Users\\v063992\\AppData\\Local\\atom\\app.ico"
-	},
+  {
+    "name": "Notepad",
+    "exe": "C:\\Windows\\system32\\notepad.exe",
+    "icon": "c:\\Users\\v063992\\Downloads\\2000px-Icon-notepad.svg.png",
+    "shortcut": "1",
+    "extensions": [
+      "txt",
+      "log"
+    ]
+  },
+  {
+    "name": "Notepad++",
+    "exe": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\Notepad++Portable.exe",
+    "icon": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\App\\AppInfo\\appicon.ico",
+    "shortcut": "2",
+    "extensions": [
+      "txt",
+      "log"
+    ]
+  },
+  {
+    "name": "Atom",
+    "exe": "C:\\Users\\v063992\\AppData\\Local\\atom\\atom.exe",
+    "icon": "C:\\Users\\v063992\\AppData\\Local\\atom\\app.ico",
+    "extensions": [
+      "yaml",
+      "xml"
+    ]
+  },
 	{
 		"name": "Visual Studio Code",
 		"exe":"C:\\Program Files\\Microsoft VS Code\\Code.exe",
-		"icon":"c:\\Users\\v063992\\Downloads\\vscode.png"
+    "icon": "c:\\Users\\v063992\\Downloads\\vscode.png",
+    "extensions": [
+      "ps1",
+      "cs",
+      "xaml",
+      "log"
+    ]
+
 		
 	}
 ]

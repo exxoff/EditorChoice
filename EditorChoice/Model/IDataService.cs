@@ -8,5 +8,7 @@ namespace EditorChoice.Model
 
         
         void GetData(Action<List<Editor>, Exception> callback);
+
+        
     }
 }

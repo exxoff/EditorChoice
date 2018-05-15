@@ -24,5 +24,13 @@ namespace EditorChoice
 
             Closing += (s, e) => ViewModelLocator.Cleanup();
         }
+
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

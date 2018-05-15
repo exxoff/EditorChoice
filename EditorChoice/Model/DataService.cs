@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace EditorChoice.Model
 {
@@ -30,22 +31,8 @@ namespace EditorChoice.Model
             // Use this to connect to the actual data service
             Editors = new List<Editor>();
             string currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
-            Editors = ReadSource(currentDirectory + "\\editors.json");
+            Editors = ReadSource(currentDirectory + "\\editors.json", Path.GetExtension(Document.Instance.DucumentPath).Trim('.'));
 
-
-            //Editors.Add(new Editor()
-            //{
-            //    EditorName = "Notepad",
-            //    ExePath = @"C:\Windows\System32\Notepad.exe",
-            //    IconFile = @"c:\Users\v063992\Downloads\icon1.png"
-            //});
-
-            //Editors.Add(new Editor()
-            //{
-            //    EditorName = "Notepad++",
-            //    ExePath = @"c:\PFiles\PortableApps\PortableApps\Notepad++Portable\Notepad++Portable.exe",
-            //    IconFile = @"c:\PFiles\PortableApps\PortableApps\Notepad++Portable\App\AppInfo\appicon.ico"
-            //});
 
 
             callback(Editors, null);
@@ -65,6 +52,22 @@ namespace EditorChoice.Model
 
 
             return retList;
+        }
+
+        private List<Editor> ReadSource(string Jsonfile, string extension)
+        {
+            List<Editor> retList = new List<Editor>();
+
+            using (StreamReader reader = new StreamReader(new Uri(Jsonfile).AbsolutePath))
+            {
+                var json = reader.ReadToEnd();
+
+                retList = JsonConvert.DeserializeObject<List<Editor>>(json);
+            }
+
+            var list = retList.Where(x => (x.Extensions != null) && x.Extensions.Contains(extension)).ToList();
+
+            return list;
         }
         public DataService()
         {

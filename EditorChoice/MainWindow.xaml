@@ -10,7 +10,8 @@
         WindowStyle="ToolWindow"
         SizeToContent="WidthAndHeight"
         Title="Choose editor"
-        DataContext="{Binding Main, Source={StaticResource Locator}}">
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        KeyDown="Window_KeyDown">
 
     <Window.Resources>
         <ResourceDictionary>

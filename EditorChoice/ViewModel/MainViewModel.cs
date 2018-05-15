@@ -66,6 +66,8 @@ namespace EditorChoice.ViewModel
 
             });
 
+            
+
         }
 
         public void StartEditor(object obj)
