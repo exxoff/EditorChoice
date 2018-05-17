@@ -56,18 +56,33 @@ namespace EditorChoice.Model
 
         private List<Editor> ReadSource(string Jsonfile, string extension)
         {
-            List<Editor> retList = new List<Editor>();
+            List<Editor> allEditors = new List<Editor>();
 
             using (StreamReader reader = new StreamReader(new Uri(Jsonfile).AbsolutePath))
             {
                 var json = reader.ReadToEnd();
 
-                retList = JsonConvert.DeserializeObject<List<Editor>>(json);
+                allEditors = JsonConvert.DeserializeObject<List<Editor>>(json);
             }
 
-            var list = retList.Where(x => (x.Extensions != null) && x.Extensions.Contains(extension)).ToList();
+            var returnList = new List<Editor>();
+            var tempList = new List<Editor>(allEditors);
+            foreach (var item in tempList)
+            {
+                if(item.Extensions != null && item.Extensions.Contains(extension))
+                {
+                    returnList.Add(item);
+                    allEditors.Remove(item);
+                }
 
-            return list;
+            }
+
+            if(allEditors.Count > 0)
+            {
+                returnList.AddRange(allEditors);
+            }
+
+            return returnList;
         }
         public DataService()
         {

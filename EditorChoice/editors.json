@@ -15,8 +15,7 @@
     "icon": "c:\\PFiles\\PortableApps\\PortableApps\\Notepad++Portable\\App\\AppInfo\\appicon.ico",
     "shortcut": "2",
     "extensions": [
-      "txt",
-      "log"
+      "txt"
     ]
   },
   {
@@ -25,7 +24,8 @@
     "icon": "C:\\Users\\v063992\\AppData\\Local\\atom\\app.ico",
     "extensions": [
       "yaml",
-      "xml"
+      "xml",
+      "log"
     ]
   },
 	{
