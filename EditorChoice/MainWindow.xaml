@@ -37,7 +37,7 @@
                         CommandParameter="{Binding}"
                         >
 
-                <Image Source="{Binding IconFilePath}"/>
+                <Image Source="{Binding IconImage}"/>
                 </Button>
 
                 </DataTemplate>

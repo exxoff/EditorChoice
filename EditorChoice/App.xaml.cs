@@ -24,7 +24,7 @@ namespace EditorChoice
             if(e.Args.Length > 0)
             {
                 Document d = Document.Instance;
-                d.DucumentPath = e.Args[0];
+                d.DocumentPath = e.Args[0];
 
             }
             else

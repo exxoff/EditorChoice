@@ -31,7 +31,7 @@ namespace EditorChoice.Model
             // Use this to connect to the actual data service
             Editors = new List<Editor>();
             string currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
-            Editors = ReadSource(currentDirectory + "\\editors.json", Path.GetExtension(Document.Instance.DucumentPath).Trim('.'));
+            Editors = ReadSource(currentDirectory + "\\editors.json", Path.GetExtension(Document.Instance.DocumentPath).Trim('.'));
 
 
 
@@ -86,14 +86,7 @@ namespace EditorChoice.Model
         }
         public DataService()
         {
-            //var item = new Editor()
-            //{
-            //    EditorName = "Notepad",
-            //    ExePath = @"C:\Windows\System32\Notepad.exe",
-            //    IconFile = @"c:\Users\v063992\Downloads\icon1.png"
-            //};
 
-            //Editors.Add(item);
         }
     }
 }

@@ -53,7 +53,7 @@ namespace EditorChoice.ViewModel
 
             Document d = Document.Instance;
 
-            this.DocumentPath = d.DucumentPath;
+            this.DocumentPath = d.DocumentPath;
             DoStart = new RelayCommand<object>(p => StartEditor(p));
 
             dataService.GetData((items, error) =>
